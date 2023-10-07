@@ -17,11 +17,52 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-# Título do projeto
+# Dictionary
 
-Um parágrafo da descrição do projeto vai aqui
+Aplicativo para listar palavras em inglês, visualizar uma palavra, significados e a fonética.
 
-## 🚀 Começando
+## 🛠️ Construído com
+
+Mencione as ferramentas que você usou para criar seu projeto
+
+*Flutter 3.10.4
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
+* [Maven](https://maven.apache.org/) - Gerente de Dependência
+* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+
+
+## 🚀 Instalação
+
+**Passo 1:**
+
+Baixe ou clone o repositório usando o link abaixo:
+
+```
+https://github.com/zubairehman/flutter-boilerplate-project.git
+```
+
+**Passo 2:**
+
+Vá para a raiz do projeto e execute o seguinte comando no console para obter as dependências necessárias:
+
+```
+flutter pub get 
+```
+
+**Passo 3:**
+
+This project uses `inject` library that works with code generation, execute the following command to generate files:
+
+```
+flutter packages pub run build_runner build --delete-conflicting-outputs
+```
+
+or watch command in order to keep the source code synced automatically:
+
+```
+flutter packages pub run build_runner watch
+```
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
@@ -35,23 +76,6 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 Dar exemplos
 ```
 
-### 🔧 Instalação
-
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
-
-```
-Dar exemplos
-```
-
-E repita:
-
-```
-Até finalizar
-```
-
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
 
 ## ⚙️ Executando os testes
 
@@ -77,15 +101,7 @@ Dar exemplos
 
 Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
-## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
-
-*Flutter 3.10.4
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
 
 ## 🖇️ Colaborando
 
@@ -118,3 +134,5 @@ Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](h
 
 ---
 ⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+
+This is a challenge by [Coodesh](https://coodesh.com/)
