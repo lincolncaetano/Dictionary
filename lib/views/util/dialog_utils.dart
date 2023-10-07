@@ -21,4 +21,14 @@ class DialogUtils {
       ),
     );
   }
+
+  static void errorSuccessSnackbar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.red,
+        content: Text(message),
+        duration: Duration(seconds: 2),
+      )
+    );
+  }
 }

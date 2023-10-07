@@ -27,6 +27,15 @@ class _CadastroScreenState extends State<CadastroScreen> {
     } catch (e) {
       print('Erro de cadastro: $e');
       Navigator.pop(context);
+
+      if(e.toString().contains("[firebase_auth/invalid-email]")){
+        DialogUtils.errorSuccessSnackbar(context, "Email invalido");
+      }
+
+      if(e.toString().contains("[firebase_auth/missing-password]")){
+        DialogUtils.errorSuccessSnackbar(context, "Campo senha é obrigatório");
+      }
+
     }
   }
 

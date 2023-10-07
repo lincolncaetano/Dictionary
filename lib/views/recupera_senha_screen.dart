@@ -24,6 +24,13 @@ class _RecuperaSenhaScreenState extends State<RecuperaSenhaScreen> {
     } catch (e) {
       print('Erro ao recuperar senha: $e');
       Navigator.pop(context);
+
+      if(e.toString().contains("[firebase_auth/missing-email]")){
+        DialogUtils.errorSuccessSnackbar(context, "Campo email é obrigatório");
+      }
+      if(e.toString().contains("[firebase_auth/invalid-email]")){
+        DialogUtils.errorSuccessSnackbar(context, "Email inválido");
+      }
     }
   }
 

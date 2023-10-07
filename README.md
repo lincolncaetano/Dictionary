@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-Flutter 3.3.5
+Flutter 3.10.4
 
 ## Getting Started
 
