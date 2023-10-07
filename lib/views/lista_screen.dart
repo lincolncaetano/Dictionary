@@ -1,13 +1,12 @@
 import 'dart:convert';
 
-import 'package:audioplayers/audioplayers.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dictionary/models/definicao_palavra.dart';
 import 'package:dictionary/models/palavra.dart';
 import 'package:dictionary/services/auth_service.dart';
 import 'package:dictionary/services/palavra_service.dart';
 import 'package:dictionary/services/usuario_service.dart';
 import 'package:dictionary/views/widget/dialog_palavra.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:http/http.dart' as http;
@@ -114,6 +113,13 @@ class _PalavrasListScreenState extends State<PalavrasListScreen> {
            DefinicaoPalavra definicao = DefinicaoPalavra.fromJson(responseData[0]);
            _usuarioService.adicionarHistorico(palavra!);
            bool isFavorita = await _usuarioService.verificaPalavraFavorita(definicao.word!);
+
+           // Salva os dados em cache para futuras consultas
+           await DefaultCacheManager().putFile(
+             cacheKey,
+             Uint8List.fromList(utf8.encode(json.encode(responseData[0]))),
+           );
+
            _abrirModal(definicao, isFavorita);
          } else {
            _mostrarErro('Definição não encontrada para $palavra', palavra!);

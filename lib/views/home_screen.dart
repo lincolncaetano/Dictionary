@@ -18,10 +18,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
   late UsuarioService _usuarioService;
   final AuthService _authService = AuthService();
   final PalavraService _palavraService = PalavraService(FirebaseFirestore.instance.collection('listadepalavras'));
-  PalavraService? _historicoService;
-  PalavraService? _favoritasService;
-
+  late PalavraService _historicoService;
+  late PalavraService _favoritasService;
   String? uid;
+  bool _servicosCarregados = false;
 
   @override
   void initState() {
@@ -32,9 +32,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
 
   void _carregaUsuario() async{
     uid = await _authService.obterIdUsuarioLogado();
-    _usuarioService = UsuarioService(uid!);
+    _usuarioService =  UsuarioService(uid!);
     _historicoService = PalavraService(FirebaseFirestore.instance.collection('usuarios').doc(uid!).collection("historico"));
     _favoritasService = PalavraService(FirebaseFirestore.instance.collection('usuarios').doc(uid!).collection("favoritas"));
+
+    setState(() {
+      _servicosCarregados = true;
+    });
+
   }
 
   @override
@@ -70,10 +75,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
             child: PalavrasListScreen(_palavraService),
           ),
           Center(
-            child: _historicoService != null ? PalavrasListScreen(_historicoService!) : Container(),
+            child: _servicosCarregados ? PalavrasListScreen(_historicoService!) : Container(),
           ),
           Center(
-            child: _favoritasService != null ? PalavrasListScreen(_favoritasService!) : Container(),
+            child: _servicosCarregados ? PalavrasListScreen(_favoritasService!) : Container(),
           ),
         ],
       ),
