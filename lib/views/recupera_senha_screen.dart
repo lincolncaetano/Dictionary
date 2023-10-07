@@ -21,6 +21,7 @@ class _RecuperaSenhaScreenState extends State<RecuperaSenhaScreen> {
 
       Navigator.pop(context);
       DialogUtils.showSuccessSnackbar(context, 'Email enviado com sucesso');
+
     } catch (e) {
       print('Erro ao recuperar senha: $e');
       Navigator.pop(context);
