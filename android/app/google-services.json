@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "467733816131",
+    "project_id": "dictionary-2876e",
+    "storage_bucket": "dictionary-2876e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467733816131:android:f024379a176305822245f6",
+        "android_client_info": {
+          "package_name": "com.lincolncaetano.dictionary.dictionary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcUK9J5uBE0r47MHKpG0mStx04hVwiT4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
