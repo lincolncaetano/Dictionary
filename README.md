@@ -25,9 +25,8 @@ Aplicativo para listar palavras em inglês, visualizar uma palavra, significados
 
 Mencione as ferramentas que você usou para criar seu projeto
 
-*Flutter 3.10.4
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
+* [Flutter 3.10.4](https://docs.flutter.dev/release/archive)
+* [Firebase](http://www.dropwizard.io/1.0.2/docs/) - Back-End
 * [Maven](https://maven.apache.org/) - Gerente de Dependência
 * [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
 
@@ -113,12 +112,8 @@ Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as vers�
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
+* **Lincoln Caetano Dias** - *Desenvolvedor* - [umdesenvolvedor](https://github.com/linkParaPerfil)
 
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
 
 ## 📄 Licença
 

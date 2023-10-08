@@ -1,5 +1,4 @@
 import 'package:dictionary/views/util/dialog_utils.dart';
-import 'package:dictionary/views/util/success_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
