@@ -7,10 +7,10 @@ Aplicativo para listar palavras em inglês, visualizar uma palavra, significados
 Mencione as ferramentas que você usou para criar seu projeto
 
 * [Flutter 3.10.4](https://docs.flutter.dev/release/archive)
-* [Firebase](http://www.dropwizard.io/1.0.2/docs/) - Back-End
-* [Provider](https://maven.apache.org/) - Gestão de Dados
-* [Audioplayers]() - Player para tocar audio da palavra
-* [flutter_cache_manager]() - gerenciar arquivo em cache
+* [Firebase](https://firebase.google.com/) - Back-End
+* [Provider](https://pub.dev/packages/provider) - Gestão de Dados
+* [Audioplayers](https://pub.dev/packages/audioplayers) - Player para tocar audio da palavra
+* [flutter_cache_manager](https://pub.dev/packages/flutter_cache_manager) - gerenciar arquivo em cache
 
 
 ## 🚀 Instalação
@@ -31,85 +31,40 @@ Vá para a raiz do projeto e execute o seguinte comando no console para obter as
 flutter pub get 
 ```
 
+***Android:***
+
 **Passo 3:**
 
-This project uses `inject` library that works with code generation, execute the following command to generate files:
+Em Android -> local.propertis, adicione os seguintes atributos:
 
 ```
-flutter packages pub run build_runner build --delete-conflicting-outputs
+flutter.minSdkVersion=21
+flutter.targetSdkVersion=30
 ```
 
-or watch command in order to keep the source code synced automatically:
+**Passo 4:**
+para gerar build :
 
 ```
-flutter packages pub run build_runner watch
+flutter build apk
 ```
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+***Web:***
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+**Passo 3:**
 
-### 📋 Pré-requisitos
-
-De que coisas você precisa para instalar o software e como instalá-lo?
+para gerar build :
 
 ```
-Dar exemplos
+flutter run -d chrome
 ```
 
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Implantação
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
-
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto).
 
 ## ✒️ Autores
 
 * **Lincoln Caetano Dias** - *Desenvolvedor* - [umdesenvolvedor](https://github.com/linkParaPerfil)
 
 
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
-
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
 
 This is a challenge by [Coodesh](https://coodesh.com/)
