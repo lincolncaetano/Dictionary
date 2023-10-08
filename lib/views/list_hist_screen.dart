@@ -82,7 +82,14 @@ class _HistListScreenScreenState extends State<HistListScreen> {
                       _indiceAtual,
                       palavra.id
                   );
-                });
+                }).then((value) {
+                  _palavras = [];
+                  _carregarPalavras();
+                  setState(() {
+
+                  });
+            }
+            );
           },
           child: Center(
             child: Text(

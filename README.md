@@ -27,8 +27,9 @@ Mencione as ferramentas que você usou para criar seu projeto
 
 * [Flutter 3.10.4](https://docs.flutter.dev/release/archive)
 * [Firebase](http://www.dropwizard.io/1.0.2/docs/) - Back-End
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+* [Provider](https://maven.apache.org/) - Gestão de Dados
+* [Audioplayers]() - Player para tocar audio da palavra
+* [flutter_cache_manager]() - gerenciar arquivo em cache
 
 
 ## 🚀 Instalação

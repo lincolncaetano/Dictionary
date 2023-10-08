@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void _carregaUsuario() async{
 
-    await Future.delayed(const Duration(seconds: 4));
+    await Future.delayed(const Duration(seconds: 2));
 
     await AuthService().obterIdUsuarioLogado()!= null
         ? Navigator.pushReplacementNamed(context, '/home')
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Dictionary"),
+        child: Text("Dictionary", style: TextStyle(fontSize: 35),),
       ),
     );
   }
