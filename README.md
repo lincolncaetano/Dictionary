@@ -2,6 +2,9 @@
 
 Aplicativo para listar palavras em inglês, visualizar uma palavra, significados e a fonética.
 
+
+[Apresentação do Projeto](https://www.loom.com/embed/19b22ae026a047be9a55aab69b17b566)
+
 ## 🛠️ Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto
@@ -62,7 +65,7 @@ flutter run -d chrome
 
 ## ✒️ Autores
 
-* **Lincoln Caetano Dias** - *Desenvolvedor* - [umdesenvolvedor](https://github.com/linkParaPerfil)
+* **Lincoln Caetano Dias** - *Desenvolvedor*
 
 
 ---

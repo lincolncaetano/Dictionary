@@ -74,6 +74,7 @@ class _DialogPalavraState extends State<DialogPalavra> {
       definicao = DefinicaoPalavra.fromJson(
         json.decode(await fileInfo.file.readAsString()),
       );
+      usuarioService.adicionarHistorico(palavra!);
       isFavorita = await usuarioService.verificaPalavraFavorita(definicao.word!);
       error = false;
     }else{

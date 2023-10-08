@@ -37,11 +37,11 @@ class _LoginScreenState extends State<LoginScreen> {
       print('Erro de login: $e');
       Navigator.pop(context);
 
-      if(e.toString().contains("[firebase_auth/invalid-email]")){
+      if(e.toString().toUpperCase().contains("invalid_email".toUpperCase())){
         DialogUtils.errorSuccessSnackbar(context, "Email invalido");
       }
 
-      if(e.toString().contains("[firebase_auth/invalid-login-credentials]")){
+      if(e.toString().toUpperCase().contains("invalid_login_credentials".toUpperCase())){
         DialogUtils.errorSuccessSnackbar(context, "email ou senha invalido");
       }
 

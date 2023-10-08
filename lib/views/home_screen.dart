@@ -56,6 +56,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dictionary"),
+        actions: [
+          IconButton(
+              onPressed: (){
+                _authService.logout(context);
+              },
+              icon: Icon(Icons.logout))
+        ],
         bottom: TabBar(
           controller: _tabController,
           tabs:const <Widget> [
