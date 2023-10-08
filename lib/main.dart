@@ -1,8 +1,11 @@
 import 'package:dictionary/firebase_options.dart';
+import 'package:dictionary/providers/palavras_provider.dart';
 import 'package:dictionary/routes.dart';
+import 'package:dictionary/services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 late final FirebaseApp app;
 late final FirebaseAuth auth;
@@ -12,7 +15,14 @@ void main() async{
   app = await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   auth = FirebaseAuth.instanceFor(app: app);
 
-  runApp(MyApp());
+  runApp(
+      MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (context) => PalavraProvider()),
+          ],
+        child: MyApp(),
+      )
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -23,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Dictionary',
-      initialRoute: _checkInitialRoute(),
+      initialRoute: '/',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -32,13 +42,5 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  String _checkInitialRoute() {
-    User? user = _auth.currentUser;
-    if (user != null) {
-      return '/home'; // Usuário logado, redirecionar para a página inicial
-    } else {
-      return '/'; // Nenhum usuário logado, redirecionar para a página de login
-    }
-  }
 }
 

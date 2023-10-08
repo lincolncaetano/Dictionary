@@ -1,9 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dictionary/providers/palavras_provider.dart';
 import 'package:dictionary/services/auth_service.dart';
 import 'package:dictionary/services/palavra_service.dart';
 import 'package:dictionary/services/usuario_service.dart';
+import 'package:dictionary/views/list_hist_screen.dart';
 import 'package:dictionary/views/lista_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -72,13 +75,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin{
         controller: _tabController,
         children: <Widget>[
           Center(
-            child: PalavrasListScreen(_palavraService),
+            child: _servicosCarregados ? PalavrasListScreen(_usuarioService) : CircularProgressIndicator()
           ),
           Center(
-            child: _servicosCarregados ? PalavrasListScreen(_historicoService!) : Container(),
+            child: _servicosCarregados ? HistListScreen(_historicoService!) : Container(),
           ),
           Center(
-            child: _servicosCarregados ? PalavrasListScreen(_favoritasService!) : Container(),
+            child: _servicosCarregados ? HistListScreen(_favoritasService!) : Container(),
           ),
         ],
       ),
